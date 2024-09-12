@@ -48,42 +48,42 @@ function App() {
               <div className="bottom">
                 <ul className="form-flow">
                   {/* {controlFlow.map(item => <li key={item}>{item}</li>)} */}
-                  <li className=""><NavLink to="first" className={({ isActive, isPending }) =>
+                  <li className=""><NavLink to="/" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
                         ? "pending"
                         : ""
                     }>{controlFlow[0]}</NavLink></li>
-                  <li><NavLink to="test" className={({ isActive, isPending }) =>
+                  <li><NavLink to="evaluate-rule" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
                         ? "pending"
                         : ""
                     }>{controlFlow[1]}</NavLink></li>
-                  <li><NavLink to="test" className={({ isActive, isPending }) =>
+                  <li><NavLink to="standards-Procedures" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
                         ? "pending"
                         : ""
                     }>{controlFlow[2]}</NavLink></li>
-                  <li><NavLink to="test" className={({ isActive, isPending }) =>
+                  <li><NavLink to="access-risk" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
                         ? "pending"
                         : ""
                     }>{controlFlow[3]}</NavLink></li>
-                  <li><NavLink to="test" className={({ isActive, isPending }) =>
+                  <li><NavLink to="implementation" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
                         ? "pending"
                         : ""
                     }>{controlFlow[4]}</NavLink></li>
-                  <li><NavLink to="test" className={({ isActive, isPending }) =>
+                  <li><NavLink to="reports" className={({ isActive, isPending }) =>
                       isActive
                         ? "active-form"
                         : isPending
@@ -101,7 +101,6 @@ function App() {
             </div>
             <div className="sub_right-bottom">
               <Outlet />
-                {/* <Form/>   */}
             </div>
           </div>
         </div>

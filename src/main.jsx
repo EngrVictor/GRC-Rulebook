@@ -6,6 +6,11 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Test from './Test.jsx'
 import ErrorPage from './ErrorPage.jsx'
 import { Form } from './form.jsx'
+import { EvalRule } from './EvalRule.jsx'
+import { StandardsProc } from './StandardsProc.jsx'
+import { AccessRisk } from './AccessRisk.jsx'
+import { Implement } from './Implement.jsx'
+import { Reports } from './Reports.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,12 +19,28 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "first",
+        path: "/",
         element: <Form />,
       },
       {
-        path: "test",
-        element: <Test />,
+        path: "evaluate-rule",
+        element: <EvalRule />,
+      },
+      {
+        path: "standards-Procedures",
+        element: <StandardsProc />,
+      },
+      {
+        path: "access-risk",
+        element: <AccessRisk />,
+      },
+      {
+        path: "implementation",
+        element: <Implement />,
+      },
+      {
+        path: "reports",
+        element: <Reports />,
       },
     ],
   },
