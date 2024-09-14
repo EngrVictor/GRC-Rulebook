@@ -5,12 +5,21 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Test from './Test.jsx'
 import ErrorPage from './ErrorPage.jsx'
-import { Form } from './form.jsx'
-import { EvalRule } from './EvalRule.jsx'
-import { StandardsProc } from './StandardsProc.jsx'
-import { AccessRisk } from './AccessRisk.jsx'
-import { Implement } from './Implement.jsx'
-import { Reports } from './Reports.jsx'
+import { Form } from './governance/form.jsx'
+import { EvalRule } from './governance/EvalRule.jsx'
+import { StandardsProc } from './governance/StandardsProc.jsx'
+import { AccessRisk } from './governance/AccessRisk.jsx'
+import { Implement } from './governance/Implement.jsx'
+import { Reports } from './governance/Reports.jsx'
+import { Governance } from './governance/Governance.jsx'
+import { Compliance } from './compliance/Compliance.jsx'
+import { Risk } from './risk/Risk.jsx'
+import { Wrapper } from './Wrapper.jsx'
+import { Setting } from './containers/Setting.jsx'
+import { Dashboard } from './containers/Dashboard.jsx'
+import { Overview } from './containers/Overview.jsx'
+import { Edit } from './containers/Edit.jsx'
+import { Audit } from './containers/Audit.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,29 +29,69 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Form />,
+        element: <Wrapper />,
+        children: [
+          {
+            path: "/governance",
+            element: <Governance />,
+            children: [
+              {
+                path: "/governance/form",
+                element: <Form />
+              },
+              {
+                path: "/governance/evaluate-rule",
+                element: <EvalRule />
+              },
+              {
+                path: "/governance/standards-and-procedures",
+                element: <StandardsProc />
+              },
+              {
+                path: "/governance/access-risk",
+                element: <AccessRisk />
+              },
+              {
+                path: "/governance/implementation",
+                element: <Implement />
+              },
+              {
+                path: "/governance/reports",
+                element: <Reports />
+              },
+            ]
+          },
+          {
+            path: "/risk",
+            element: <Risk />,
+          },
+          {
+            path: "/compliance",
+            element: <Compliance />
+          }
+        ]
       },
       {
-        path: "evaluate-rule",
-        element: <EvalRule />,
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
-        path: "standards-Procedures",
-        element: <StandardsProc />,
+        path: "/audits",
+        element: <Audit />,
       },
       {
-        path: "access-risk",
-        element: <AccessRisk />,
+        path: "/edit",
+        element: <Edit />,
       },
       {
-        path: "implementation",
-        element: <Implement />,
+        path: "/overview",
+        element: <Overview />,
       },
       {
-        path: "reports",
-        element: <Reports />,
-      },
-    ],
+        path: "/settings",
+        element: <Setting />,
+      }
+    ]
   },
 ]);
 
