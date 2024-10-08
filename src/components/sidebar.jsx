@@ -1,5 +1,5 @@
 import { UserCircleIcon, FolderOpenIcon, DocumentTextIcon, ClockIcon, WrenchScrewdriverIcon, Squares2X2Icon, PencilSquareIcon } from '@heroicons/react/24/outline'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 export const Sidebar = () => {
   return (
@@ -53,7 +53,7 @@ export const Sidebar = () => {
             }> <WrenchScrewdriverIcon className='icon'/> </NavLink>
         </div>
         <div className="avatar-section">
-            <UserCircleIcon className='user'/>
+            <Link to='/login'><UserCircleIcon className='user'/></Link>
         </div>
     </div>
   )

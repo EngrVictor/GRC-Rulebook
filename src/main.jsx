@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Test from './Test.jsx'
 import ErrorPage from './ErrorPage.jsx'
 import { Form } from './governance/form.jsx'
 import { EvalRule } from './governance/EvalRule.jsx'
@@ -20,6 +19,8 @@ import { Dashboard } from './containers/Dashboard.jsx'
 import { Overview } from './containers/Overview.jsx'
 import { Edit } from './containers/Edit.jsx'
 import { Audit } from './containers/Audit.jsx'
+import { Register } from './user/Register.jsx'
+import { Login } from './user/Login.jsx'
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,16 @@ const router = createBrowserRouter([
         element: <Setting />,
       }
     ]
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

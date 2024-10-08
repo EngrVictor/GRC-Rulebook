@@ -1,4 +1,4 @@
-import { Button } from "@headlessui/react"
+import { Button } from "./button";
 import { Bars3BottomLeftIcon, Bars3BottomRightIcon, BellAlertIcon } from "@heroicons/react/24/outline"
 
 export const Topbar = ({show, setShow}) => {

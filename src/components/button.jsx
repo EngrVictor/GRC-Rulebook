@@ -1,5 +1,5 @@
-export const button = ({children}) => {
+export const Button = ({children, color}) => {
   return (
-    <button>{children}</button>
+    <button className="primary-btn" style={{backgroundColor: color}}>{children}</button>
   )
 }
