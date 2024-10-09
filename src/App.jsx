@@ -29,10 +29,14 @@ function App() {
       }})
       .then(response => response.json())
       .then(data => setData(data));
+      if (data.msg === 'jwt expired') {
+        localStorage.removeItem('access_token')
+        console.log('i got here');
+      }
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [data.msg]);
 
 
   return (
