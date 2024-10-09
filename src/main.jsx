@@ -21,11 +21,12 @@ import { Edit } from './containers/Edit.jsx'
 import { Audit } from './containers/Audit.jsx'
 import { Register } from './user/Register.jsx'
 import { Login } from './user/Login.jsx'
+import { ProtectiveRoute } from './components/protectiveRoute.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <ProtectiveRoute><App /></ProtectiveRoute>,
     errorElement: <ErrorPage />,
     children: [
       {
